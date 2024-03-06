@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import db from './firebase';
 import { doc, runTransaction } from "firebase/firestore";
-import {onSnapshot} from "firebase/firestore";
+import { onSnapshot } from "firebase/firestore";
 
 function App() {
 
@@ -122,18 +122,16 @@ function App() {
                 items
               }
 
-
               // UPDATING SHOP DB
               transaction.update(shopDB,updatedShopData);
 
-              // updating EQ DB
+              // UPDATING EQ DB
               transaction.update(eqDB,updatedEqData);
         
           }else{
             alert("Not Enough gold!");
             throw Error("Not Enough gold!");
           }
-        
       })
     }catch(e){
       console.log("Transaction failed: "+e)
@@ -171,7 +169,7 @@ function App() {
         
         var shopQuantity = 0;
         
-        // Checking IF ENOUGH GOLD
+        // CHECKING IF ENOUGH GOLD
         if(shopGold >= eqItemPrice){
 
           // CALCULATIONS FOR EQUIPMENT

@@ -91,14 +91,6 @@
   margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
 :root {
   --face: #be9d66;
   --lowlight: #111;
@@ -106,7 +98,6 @@
   --side-dark: #120e08;
   --coin-size: 3rem;
 }
-
 
 .coin {
   height: var(--coin-size);
